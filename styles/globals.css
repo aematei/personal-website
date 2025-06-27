@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Work Sans', sans-serif;
+  color: #2D2D2D;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Outfit', sans-serif;
+  color: #2D2D2D;
+}
+
+.prose {
+  @apply max-w-none;
+}
+
+.prose h1 {
+  @apply text-3xl font-semibold mb-6 mt-8;
+}
+
+.prose h2 {
+  @apply text-2xl font-semibold;
+}
+
+.prose h3 {
+  @apply text-xl font-semibold mb-3 mt-5;
+}
+
+.prose p {
+  @apply mb-4 leading-relaxed;
+}
+
+.prose ul, .prose ol {
+  @apply mb-4 pl-6;
+}
+
+.prose li {
+  @apply mb-1;
+}
+
+.prose a {
+  @apply text-[#6C63FF] hover:underline;
+}
+
+.prose blockquote {
+  @apply border-l-4 border-gray-300 pl-4 italic my-4;
+}
+
+.prose code {
+  @apply bg-gray-100 px-1 py-0.5 rounded text-sm;
+}
+
+.prose pre {
+  @apply bg-gray-100 p-4 rounded overflow-x-auto my-4;
+}
+
+.prose pre code {
+  @apply bg-transparent p-0;
+}
+
+/* Scroll-based gradient animation */
+.animate-gradient-shift {
+  background: linear-gradient(45deg, 
+    #fef3c7, #fed7aa, #dbeafe, #fecaca, #e0e7ff,
+    #fef3c7, #fed7aa, #dbeafe, #fecaca, #e0e7ff,
+    #fef3c7, #fed7aa, #dbeafe);
+  background-size: 600% 600%;
+  background-position: var(--scroll-bg-x, 25%) var(--scroll-bg-y, 25%);
+  transition: background-position 0.1s ease-out;
+}
+
+/* Fade in up animation */
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 0.6s ease-out forwards;
+}
