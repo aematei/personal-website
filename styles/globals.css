@@ -21,47 +21,71 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .prose h1 {
-  @apply text-3xl font-semibold mb-6 mt-8;
+  @apply text-3xl font-bold mb-6 mt-12 first:mt-0 text-[#2D2D2D] leading-tight;
 }
 
 .prose h2 {
-  @apply text-2xl font-semibold;
+  @apply text-2xl font-bold mb-4 mt-12 text-[#2D2D2D] leading-tight border-t border-gray-200 pt-10 first:border-t-0 first:pt-0;
 }
 
 .prose h3 {
-  @apply text-xl font-semibold mb-3 mt-5;
+  @apply text-xl font-bold mb-4 mt-8 text-[#2D2D2D] leading-tight;
+}
+
+.prose h4 {
+  @apply text-lg font-bold mb-3 mt-6 text-[#2D2D2D];
 }
 
 .prose p {
-  @apply mb-4 leading-relaxed;
+  @apply mb-6 leading-relaxed text-[#2D2D2D]/90;
 }
 
 .prose ul, .prose ol {
-  @apply mb-4 pl-6;
+  @apply mb-6 pl-5 space-y-3;
 }
 
 .prose li {
-  @apply mb-1;
+  @apply leading-relaxed text-[#2D2D2D]/90;
+}
+
+.prose ul {
+  @apply list-disc;
+}
+
+.prose ol {
+  @apply list-decimal;
+}
+
+.prose li strong {
+  @apply text-[#2D2D2D] font-semibold;
 }
 
 .prose a {
-  @apply text-[#6C63FF] hover:underline;
+  @apply text-[#6C63FF] hover:underline font-medium;
 }
 
 .prose blockquote {
-  @apply border-l-4 border-gray-300 pl-4 italic my-4;
+  @apply border-l-4 border-[#6C63FF]/30 pl-6 italic my-8 text-[#2D2D2D]/80 bg-gray-50/50 py-4 rounded-r;
 }
 
 .prose code {
-  @apply bg-gray-100 px-1 py-0.5 rounded text-sm;
+  @apply bg-gray-100/80 px-2 py-1 rounded text-sm font-medium text-[#2D2D2D];
 }
 
 .prose pre {
-  @apply bg-gray-100 p-4 rounded overflow-x-auto my-4;
+  @apply bg-gray-100/80 p-6 rounded-lg overflow-x-auto my-8 border border-gray-200/50;
 }
 
 .prose pre code {
   @apply bg-transparent p-0;
+}
+
+.prose strong {
+  @apply text-[#2D2D2D] font-semibold;
+}
+
+.prose em {
+  @apply text-[#2D2D2D]/80;
 }
 
 /* Scroll-based gradient animation */

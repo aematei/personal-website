@@ -15,7 +15,7 @@ export default function BlogPostPage({ postData }: BlogPostPageProps) {
     >
       <div className="max-w-4xl mx-auto px-6">
         <article className="py-20">
-          <div className="mb-16">
+          <div className="mb-20">
             <Link 
               href="/" 
               className="text-[#6C63FF] hover:underline inline-flex items-center mb-16 text-lg font-medium transition-colors"
@@ -23,7 +23,7 @@ export default function BlogPostPage({ postData }: BlogPostPageProps) {
               ← Back to Alex Matei
             </Link>
             
-            <header className="text-center mb-20">
+            <header className="text-center mb-16">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-8 leading-tight text-[#2D2D2D]">
                 {postData.title}
               </h1>
@@ -38,11 +38,16 @@ export default function BlogPostPage({ postData }: BlogPostPageProps) {
           </div>
 
           <div 
-            className="rounded-2xl border border-white/30 shadow-sm p-12 md:p-16"
+            className="rounded-2xl border border-white/30 shadow-sm relative"
             style={{backgroundColor: 'rgba(255, 255, 255, 0.6)', backdropFilter: 'blur(8px)'}}
           >
-            <div className="prose prose-lg max-w-none">
-              <div dangerouslySetInnerHTML={{ __html: postData.content }} />
+            <div className="max-w-4xl mx-auto px-12 py-16 md:px-16 md:py-20">
+              <div className="prose prose-lg max-w-none">
+                <div 
+                  className="text-lg leading-relaxed"
+                  dangerouslySetInnerHTML={{ __html: postData.content }} 
+                />
+              </div>
             </div>
           </div>
         </article>
