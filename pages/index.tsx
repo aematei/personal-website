@@ -12,9 +12,9 @@ export default function Home({ allPostsData }: HomeProps) {
   return (
     <Layout>
       <div className="max-w-5xl mx-auto px-6">
-        <section className="md:pt-40">
+        <section className="min-h-screen flex items-center justify-center">
           <div className="max-w-4xl mx-auto text-center">
-            <div className="flex flex-col items-center mb-12">
+            <div className="flex flex-col items-center">
               <div className="mb-6 relative group cursor-pointer opacity-0 animate-fade-in-up active:scale-110 active:-translate-y-2 transition-transform duration-300" style={{animationDelay: '0.2s'}}>
                 <Image
                   src="/AlexAboutAvatar3.png"
@@ -62,13 +62,17 @@ export default function Home({ allPostsData }: HomeProps) {
                 </a>
               </div>
             </div>
-          
-            <div className="text-lg md:text-xl text-[#2D2D2D]/90 my-24 leading-relaxed space-y-4 max-w-4xl mx-auto text-left opacity-0 animate-fade-in-up" style={{animationDelay: '1.0s'}}>
+          </div>
+        </section>
+
+        <section className="py-20">
+          <div className="max-w-4xl mx-auto text-center">
+            <div className="text-lg md:text-xl text-[#2D2D2D]/90 mb-24 leading-relaxed space-y-4 max-w-4xl mx-auto text-left opacity-0 animate-fade-in-up" style={{animationDelay: '1.0s'}}>
               <p>I'm a software developer who loves building things that matter. Fresh out of Cal Poly Pomona and diving straight into startup life, where I'm shipping features, designing systems, and learning what it takes to turn ideas into real products.</p>
               <p>I work across the full stack and care about writing code that's thoughtful, maintainable, and actually solves problems for people.</p>
               <p>Currently building at Perfect Hire.</p>
             </div>
-            
+
             <div className="mb-16 opacity-0 animate-fade-in-up" style={{animationDelay: '1.2s'}}>
               <h3 className="text-3xl font-bold mb-8 text-[#2D2D2D]">Technical Arsenal</h3>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
