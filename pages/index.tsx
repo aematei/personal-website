@@ -15,7 +15,39 @@ export default function Home({ allPostsData }: HomeProps) {
         <section className="min-h-screen flex items-center justify-center">
           <div className="max-w-4xl mx-auto text-center">
             <div className="flex flex-col items-center">
-              <div className="mb-6 relative group cursor-pointer opacity-0 animate-fade-in-up active:scale-110 active:-translate-y-2 transition-transform duration-300" style={{animationDelay: '0.2s'}}>
+              <div
+                className="mb-6 relative group cursor-pointer opacity-0 animate-fade-in-up active:scale-110 active:-translate-y-2 transition-transform duration-300"
+                style={{animationDelay: '0.2s'}}
+                onClick={() => {
+                  const element = document.getElementById('description')
+                  if (element) {
+                    const targetPosition = element.getBoundingClientRect().top + window.pageYOffset
+                    const startPosition = window.pageYOffset
+                    const distance = targetPosition - startPosition
+                    const duration = 1500 // milliseconds
+                    let start: number | null = null
+
+                    const animation = (currentTime: number) => {
+                      if (start === null) start = currentTime
+                      const timeElapsed = currentTime - start
+                      const progress = Math.min(timeElapsed / duration, 1)
+
+                      // Ease in-out function for smoother animation
+                      const ease = progress < 0.5
+                        ? 2 * progress * progress
+                        : 1 - Math.pow(-2 * progress + 2, 2) / 2
+
+                      window.scrollTo(0, startPosition + distance * ease)
+
+                      if (timeElapsed < duration) {
+                        requestAnimationFrame(animation)
+                      }
+                    }
+
+                    requestAnimationFrame(animation)
+                  }
+                }}
+              >
                 <Image
                   src="/AlexAboutAvatar3.png"
                   alt="Alex Matei"
@@ -65,7 +97,7 @@ export default function Home({ allPostsData }: HomeProps) {
           </div>
         </section>
 
-        <section className="py-20">
+        <section id="description" className="py-20">
           <div className="max-w-4xl mx-auto text-center">
             <div className="text-lg md:text-xl text-[#2D2D2D]/90 mb-24 leading-relaxed space-y-4 max-w-4xl mx-auto text-left opacity-0 animate-fade-in-up" style={{animationDelay: '1.0s'}}>
               <p>I'm a software developer who loves building things that matter. Fresh out of Cal Poly Pomona and diving straight into startup life, where I'm shipping features, designing systems, and learning what it takes to turn ideas into real products.</p>

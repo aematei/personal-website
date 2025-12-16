@@ -13,86 +13,36 @@ export default function Layout({
   description = 'Building intelligent web applications with clean code and thoughtful design'
 }: LayoutProps) {
   useEffect(() => {
-    let animationId: number
-    let currentX = 25
-    let currentY = 25
-    let targetX = 25
-    let targetY = 25
-    let isUserActive = false
-    let stopTimeout: NodeJS.Timeout
-    let startTime = Date.now()
-
-    const updateGradient = () => {
-      const now = Date.now()
-      const elapsed = now - startTime
-      
-      // If no user input, create subtle continuous cycling
-      if (!isUserActive) {
-        const time = elapsed * 0.0005 // Very slow auto-cycle
-        targetX = 25 + Math.sin(time) * 15
-        targetY = 25 + Math.cos(time * 0.7) * 10
-      }
-      
-      // Smooth interpolation towards target
-      currentX += (targetX - currentX) * 0.1
-      currentY += (targetY - currentY) * 0.1
-      
-      document.documentElement.style.setProperty('--scroll-bg-x', `${currentX}%`)
-      document.documentElement.style.setProperty('--scroll-bg-y', `${currentY}%`)
-      
-      animationId = requestAnimationFrame(updateGradient)
-    }
-
-    const startUserInput = () => {
-      isUserActive = true
-      clearTimeout(stopTimeout)
-      stopTimeout = setTimeout(() => {
-        isUserActive = false
-      }, 2000) // Return to auto-cycle 2 seconds after last input
-    }
-
     const handleScroll = () => {
       // Create more organic, less predictable movement
       const scroll = window.scrollY * 0.01
       const scrollCycle = scroll % 100
-      
+
       // Multiple overlapping sine waves with different frequencies and phases
       const wave1 = Math.sin(scrollCycle * 0.07 + 1.2) * 25
       const wave2 = Math.sin(scrollCycle * 0.13 + 2.7) * 15
       const wave3 = Math.cos(scrollCycle * 0.05 + 0.8) * 20
-      
+
       const waveY1 = Math.cos(scrollCycle * 0.09 + 3.1) * 20
       const waveY2 = Math.sin(scrollCycle * 0.11 + 1.5) * 12
-      
+
       const newX = 25 + (wave1 + wave2) * 0.6 + wave3 * 0.4
       const newY = 25 + (waveY1 + waveY2) * 0.8
-      
-      targetX = Math.max(15, Math.min(85, newX))
-      targetY = Math.max(15, Math.min(85, newY))
-      startUserInput()
+
+      const targetX = Math.max(15, Math.min(85, newX))
+      const targetY = Math.max(15, Math.min(85, newY))
+
+      document.documentElement.style.setProperty('--scroll-bg-x', `${targetX.toFixed(2)}%`)
+      document.documentElement.style.setProperty('--scroll-bg-y', `${targetY.toFixed(2)}%`)
     }
 
-    const handleMouseMove = (e: MouseEvent) => {
-      const mouseInfluence = 0.01
-      const newX = targetX + e.movementX * mouseInfluence
-      const newY = targetY + e.movementY * mouseInfluence * 0.5
-      
-      targetX = Math.max(15, Math.min(85, newX))
-      targetY = Math.max(15, Math.min(85, newY))
-      startUserInput()
-    }
+    // Set initial position
+    handleScroll()
 
-    // Start the animation loop immediately
-    updateGradient()
+    window.addEventListener('scroll', handleScroll, { passive: true })
 
-    window.addEventListener('scroll', handleScroll)
-    window.addEventListener('mousemove', handleMouseMove)
-    
     return () => {
       window.removeEventListener('scroll', handleScroll)
-      window.removeEventListener('mousemove', handleMouseMove)
-      cancelAnimationFrame(animationId)
-      clearTimeout(stopTimeout)
     }
   }, [])
 
