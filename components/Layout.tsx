@@ -1,5 +1,4 @@
 import Head from 'next/head'
-import Link from 'next/link'
 import { ReactNode, useEffect } from 'react'
 
 interface LayoutProps {
@@ -120,7 +119,7 @@ export default function Layout({
           {children}
         </main>
         
-        <footer className="border-t border-gray-200 mt-32">
+        <footer className="border-t border-[#2D2D2D]/20 mt-32">
           <div className="max-w-5xl mx-auto px-6 py-12">
             <div className="flex flex-col sm:flex-row justify-between items-center space-y-4 sm:space-y-0">
               <p className="text-gray-600">© 2025 Alex Matei</p>
