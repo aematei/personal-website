@@ -64,79 +64,82 @@ export default function Home({ allPostsData }: HomeProps) {
             </div>
           
             <div className="text-lg md:text-xl text-[#2D2D2D]/90 my-24 leading-relaxed space-y-4 max-w-4xl mx-auto text-left opacity-0 animate-fade-in-up" style={{animationDelay: '1.0s'}}>
-              <p>I'm a full-stack developer with a love for fast-paced collaboration, thoughtful design, and creative tooling. I thrive when building fresh, meaningful things with smart, passionate people.</p>
-              <p>Recently graduated and diving into what excites me most — prototyping ideas, designing intelligent agents, and exploring ethical, emergent tech. I bring startup energy, big-picture vision, and a drive to make tools that feel human.</p>
-              <p>Let's build something good together.</p>
+              <p>I'm a software developer who loves building things that matter. Fresh out of Cal Poly Pomona and diving straight into startup life, where I'm shipping features, designing systems, and learning what it takes to turn ideas into real products.</p>
+              <p>I work across the full stack and care about writing code that's thoughtful, maintainable, and actually solves problems for people.</p>
+              <p>Currently building at Perfect Hire.</p>
             </div>
             
             <div className="mb-16 opacity-0 animate-fade-in-up" style={{animationDelay: '1.2s'}}>
               <h3 className="text-3xl font-bold mb-8 text-[#2D2D2D]">Technical Arsenal</h3>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
                 <div className="rounded-xl p-6 shadow-sm border border-white/30 hover:border-white/50 hover:shadow-2xl hover:scale-[1.02] hover:-translate-y-1 transition-all duration-300 opacity-0 animate-fade-in-up" style={{animationDelay: '0.1s', backgroundColor: 'rgba(255, 255, 255, 0.6)', backdropFilter: 'blur(8px)'}}>
-                  <h4 className="text-lg font-semibold text-[#2D2D2D] mb-3">🧠 AI & ML Tools</h4>
-                  <div className="space-y-2">
-                    <span className="inline-block px-3 py-1 bg-orange-100 text-orange-800 rounded-md text-sm font-medium mr-2 mb-2">LangChain</span>
-                    <span className="inline-block px-3 py-1 bg-orange-100 text-orange-800 rounded-md text-sm font-medium mr-2 mb-2">LangGraph</span>
-                    <span className="inline-block px-3 py-1 bg-orange-100 text-orange-800 rounded-md text-sm font-medium mr-2 mb-2">OpenAI API</span>
-                    <span className="inline-block px-3 py-1 bg-orange-100 text-orange-800 rounded-md text-sm font-medium mr-2 mb-2">Claude API</span>
-                    <span className="inline-block px-3 py-1 bg-orange-100 text-orange-800 rounded-md text-sm font-medium mr-2 mb-2">CLIP</span>
-                    <span className="inline-block px-3 py-1 bg-orange-100 text-orange-800 rounded-md text-sm font-medium mr-2 mb-2">Prompt Engineering</span>
-                  </div>
-                </div>
-                
-                <div className="rounded-xl p-6 shadow-sm border border-white/30 hover:border-white/50 hover:shadow-2xl hover:scale-[1.02] hover:-translate-y-1 transition-all duration-300 opacity-0 animate-fade-in-up" style={{animationDelay: '0.2s', backgroundColor: 'rgba(255, 255, 255, 0.6)', backdropFilter: 'blur(8px)'}}>
-                  <h4 className="text-lg font-semibold text-[#2D2D2D] mb-3">💻 Modern Web Stack</h4>
+                  <h4 className="text-lg font-semibold text-[#2D2D2D] mb-3">💻 Frontend Development</h4>
                   <div className="space-y-2">
                     <span className="inline-block px-3 py-1 bg-blue-100 text-blue-800 rounded-md text-sm font-medium mr-2 mb-2">React</span>
-                    <span className="inline-block px-3 py-1 bg-blue-100 text-blue-800 rounded-md text-sm font-medium mr-2 mb-2">Next.js</span>
                     <span className="inline-block px-3 py-1 bg-blue-100 text-blue-800 rounded-md text-sm font-medium mr-2 mb-2">TypeScript</span>
-                    <span className="inline-block px-3 py-1 bg-blue-100 text-blue-800 rounded-md text-sm font-medium mr-2 mb-2">Tailwind CSS</span>
+                    <span className="inline-block px-3 py-1 bg-blue-100 text-blue-800 rounded-md text-sm font-medium mr-2 mb-2">JavaScript</span>
+                    <span className="inline-block px-3 py-1 bg-blue-100 text-blue-800 rounded-md text-sm font-medium mr-2 mb-2">HTML</span>
+                    <span className="inline-block px-3 py-1 bg-blue-100 text-blue-800 rounded-md text-sm font-medium mr-2 mb-2">CSS Modules</span>
                     <span className="inline-block px-3 py-1 bg-blue-100 text-blue-800 rounded-md text-sm font-medium mr-2 mb-2">Vite</span>
                   </div>
                 </div>
-                
-                <div className="rounded-xl p-6 shadow-sm border border-white/30 hover:border-white/50 hover:shadow-2xl hover:scale-[1.02] hover:-translate-y-1 transition-all duration-300 opacity-0 animate-fade-in-up" style={{animationDelay: '0.3s', backgroundColor: 'rgba(255, 255, 255, 0.6)', backdropFilter: 'blur(8px)'}}>
+
+                <div className="rounded-xl p-6 shadow-sm border border-white/30 hover:border-white/50 hover:shadow-2xl hover:scale-[1.02] hover:-translate-y-1 transition-all duration-300 opacity-0 animate-fade-in-up" style={{animationDelay: '0.2s', backgroundColor: 'rgba(255, 255, 255, 0.6)', backdropFilter: 'blur(8px)'}}>
                   <h4 className="text-lg font-semibold text-[#2D2D2D] mb-3">🔧 Backend & APIs</h4>
                   <div className="space-y-2">
+                    <span className="inline-block px-3 py-1 bg-green-100 text-green-800 rounded-md text-sm font-medium mr-2 mb-2">C# / .NET Core</span>
                     <span className="inline-block px-3 py-1 bg-green-100 text-green-800 rounded-md text-sm font-medium mr-2 mb-2">Node.js</span>
+                    <span className="inline-block px-3 py-1 bg-green-100 text-green-800 rounded-md text-sm font-medium mr-2 mb-2">Express</span>
                     <span className="inline-block px-3 py-1 bg-green-100 text-green-800 rounded-md text-sm font-medium mr-2 mb-2">Python</span>
                     <span className="inline-block px-3 py-1 bg-green-100 text-green-800 rounded-md text-sm font-medium mr-2 mb-2">FastAPI</span>
-                    <span className="inline-block px-3 py-1 bg-green-100 text-green-800 rounded-md text-sm font-medium mr-2 mb-2">Express.js</span>
-                    <span className="inline-block px-3 py-1 bg-green-100 text-green-800 rounded-md text-sm font-medium mr-2 mb-2">RESTful Design</span>
+                    <span className="inline-block px-3 py-1 bg-green-100 text-green-800 rounded-md text-sm font-medium mr-2 mb-2">RESTful APIs</span>
                   </div>
                 </div>
-                
-                <div className="rounded-xl p-6 shadow-sm border border-white/30 hover:border-white/50 hover:shadow-2xl hover:scale-[1.02] hover:-translate-y-1 transition-all duration-300 opacity-0 animate-fade-in-up" style={{animationDelay: '0.4s', backgroundColor: 'rgba(255, 255, 255, 0.6)', backdropFilter: 'blur(8px)'}}>
-                  <h4 className="text-lg font-semibold text-[#2D2D2D] mb-3">☁️ Infrastructure & Automation</h4>
+
+                <div className="rounded-xl p-6 shadow-sm border border-white/30 hover:border-white/50 hover:shadow-2xl hover:scale-[1.02] hover:-translate-y-1 transition-all duration-300 opacity-0 animate-fade-in-up" style={{animationDelay: '0.3s', backgroundColor: 'rgba(255, 255, 255, 0.6)', backdropFilter: 'blur(8px)'}}>
+                  <h4 className="text-lg font-semibold text-[#2D2D2D] mb-3">☁️ Cloud & Infrastructure</h4>
                   <div className="space-y-2">
-                    <span className="inline-block px-3 py-1 bg-purple-100 text-purple-800 rounded-md text-sm font-medium mr-2 mb-2">PostgreSQL</span>
-                    <span className="inline-block px-3 py-1 bg-purple-100 text-purple-800 rounded-md text-sm font-medium mr-2 mb-2">Supabase</span>
-                    <span className="inline-block px-3 py-1 bg-purple-100 text-purple-800 rounded-md text-sm font-medium mr-2 mb-2">Vercel</span>
+                    <span className="inline-block px-3 py-1 bg-purple-100 text-purple-800 rounded-md text-sm font-medium mr-2 mb-2">Azure</span>
+                    <span className="inline-block px-3 py-1 bg-purple-100 text-purple-800 rounded-md text-sm font-medium mr-2 mb-2">Azure Functions</span>
                     <span className="inline-block px-3 py-1 bg-purple-100 text-purple-800 rounded-md text-sm font-medium mr-2 mb-2">AWS</span>
-                    <span className="inline-block px-3 py-1 bg-purple-100 text-purple-800 rounded-md text-sm font-medium mr-2 mb-2">GitHub Actions</span>
+                    <span className="inline-block px-3 py-1 bg-purple-100 text-purple-800 rounded-md text-sm font-medium mr-2 mb-2">Google Cloud</span>
+                    <span className="inline-block px-3 py-1 bg-purple-100 text-purple-800 rounded-md text-sm font-medium mr-2 mb-2">Vercel</span>
+                    <span className="inline-block px-3 py-1 bg-purple-100 text-purple-800 rounded-md text-sm font-medium mr-2 mb-2">Docker</span>
                     <span className="inline-block px-3 py-1 bg-purple-100 text-purple-800 rounded-md text-sm font-medium mr-2 mb-2">CI/CD</span>
+                    <span className="inline-block px-3 py-1 bg-purple-100 text-purple-800 rounded-md text-sm font-medium mr-2 mb-2">GitHub Actions</span>
                   </div>
                 </div>
-                
-                <div className="rounded-xl p-6 shadow-sm border border-white/30 hover:border-white/50 hover:shadow-2xl hover:scale-[1.02] hover:-translate-y-1 transition-all duration-300 opacity-0 animate-fade-in-up" style={{animationDelay: '0.5s', backgroundColor: 'rgba(255, 255, 255, 0.6)', backdropFilter: 'blur(8px)'}}>
-                  <h4 className="text-lg font-semibold text-[#2D2D2D] mb-3">🧩 Integration & Developer Experience</h4>
+
+                <div className="rounded-xl p-6 shadow-sm border border-white/30 hover:border-white/50 hover:shadow-2xl hover:scale-[1.02] hover:-translate-y-1 transition-all duration-300 opacity-0 animate-fade-in-up" style={{animationDelay: '0.4s', backgroundColor: 'rgba(255, 255, 255, 0.6)', backdropFilter: 'blur(8px)'}}>
+                  <h4 className="text-lg font-semibold text-[#2D2D2D] mb-3">🗄️ Databases & Storage</h4>
                   <div className="space-y-2">
-                    <span className="inline-block px-3 py-1 bg-indigo-100 text-indigo-800 rounded-md text-sm font-medium mr-2 mb-2">API Orchestration</span>
-                    <span className="inline-block px-3 py-1 bg-indigo-100 text-indigo-800 rounded-md text-sm font-medium mr-2 mb-2">Docker</span>
+                    <span className="inline-block px-3 py-1 bg-amber-100 text-amber-800 rounded-md text-sm font-medium mr-2 mb-2">PostgreSQL</span>
+                    <span className="inline-block px-3 py-1 bg-amber-100 text-amber-800 rounded-md text-sm font-medium mr-2 mb-2">MySQL</span>
+                    <span className="inline-block px-3 py-1 bg-amber-100 text-amber-800 rounded-md text-sm font-medium mr-2 mb-2">MongoDB</span>
+                    <span className="inline-block px-3 py-1 bg-amber-100 text-amber-800 rounded-md text-sm font-medium mr-2 mb-2">Entity Framework</span>
+                    <span className="inline-block px-3 py-1 bg-amber-100 text-amber-800 rounded-md text-sm font-medium mr-2 mb-2">Supabase</span>
+                  </div>
+                </div>
+
+                <div className="rounded-xl p-6 shadow-sm border border-white/30 hover:border-white/50 hover:shadow-2xl hover:scale-[1.02] hover:-translate-y-1 transition-all duration-300 opacity-0 animate-fade-in-up" style={{animationDelay: '0.5s', backgroundColor: 'rgba(255, 255, 255, 0.6)', backdropFilter: 'blur(8px)'}}>
+                  <h4 className="text-lg font-semibold text-[#2D2D2D] mb-3">🛠️ Developer Tools</h4>
+                  <div className="space-y-2">
                     <span className="inline-block px-3 py-1 bg-indigo-100 text-indigo-800 rounded-md text-sm font-medium mr-2 mb-2">Git & GitHub</span>
-                    <span className="inline-block px-3 py-1 bg-indigo-100 text-indigo-800 rounded-md text-sm font-medium mr-2 mb-2">VSCode</span>
+                    <span className="inline-block px-3 py-1 bg-indigo-100 text-indigo-800 rounded-md text-sm font-medium mr-2 mb-2">VS Code</span>
+                    <span className="inline-block px-3 py-1 bg-indigo-100 text-indigo-800 rounded-md text-sm font-medium mr-2 mb-2">Claude Code</span>
                     <span className="inline-block px-3 py-1 bg-indigo-100 text-indigo-800 rounded-md text-sm font-medium mr-2 mb-2">Jupyter Notebook</span>
                   </div>
                 </div>
-                
+
                 <div className="rounded-xl p-6 shadow-sm border border-white/30 hover:border-white/50 hover:shadow-2xl hover:scale-[1.02] hover:-translate-y-1 transition-all duration-300 opacity-0 animate-fade-in-up" style={{animationDelay: '0.6s', backgroundColor: 'rgba(255, 255, 255, 0.6)', backdropFilter: 'blur(8px)'}}>
-                  <h4 className="text-lg font-semibold text-[#2D2D2D] mb-3">🚀 Project & Team Workflow</h4>
+                  <h4 className="text-lg font-semibold text-[#2D2D2D] mb-3">🚀 Project & Team Experience</h4>
                   <div className="space-y-2">
                     <span className="inline-block px-3 py-1 bg-teal-100 text-teal-800 rounded-md text-sm font-medium mr-2 mb-2">Agile / SCRUM</span>
+                    <span className="inline-block px-3 py-1 bg-teal-100 text-teal-800 rounded-md text-sm font-medium mr-2 mb-2">Kanban</span>
                     <span className="inline-block px-3 py-1 bg-teal-100 text-teal-800 rounded-md text-sm font-medium mr-2 mb-2">Jira</span>
                     <span className="inline-block px-3 py-1 bg-teal-100 text-teal-800 rounded-md text-sm font-medium mr-2 mb-2">Confluence</span>
                     <span className="inline-block px-3 py-1 bg-teal-100 text-teal-800 rounded-md text-sm font-medium mr-2 mb-2">GitHub Projects</span>
-                    <span className="inline-block px-3 py-1 bg-teal-100 text-teal-800 rounded-md text-sm font-medium mr-2 mb-2">Peer Code Reviews</span>
+                    <span className="inline-block px-3 py-1 bg-teal-100 text-teal-800 rounded-md text-sm font-medium mr-2 mb-2">Code Reviews</span>
                   </div>
                 </div>
               </div>
